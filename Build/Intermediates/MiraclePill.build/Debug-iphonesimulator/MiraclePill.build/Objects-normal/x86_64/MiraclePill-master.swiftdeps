@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
+options: "68396bb1dc4b045b3c1084884e2f63e3"
+build_time: [533909213, 163257000]
+inputs:
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/4-Foundational iOS/miracle-pill/MiraclePill/MiraclePill/ViewController.swift": [533909209, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/4-Foundational iOS/miracle-pill/MiraclePill/MiraclePill/AppDelegate.swift": [533909209, 0]
