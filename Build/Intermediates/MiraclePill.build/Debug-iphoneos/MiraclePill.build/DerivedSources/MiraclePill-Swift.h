@@ -135,12 +135,22 @@ SWIFT_CLASS("_TtC11MiraclePill11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIPickerView;
+@class UIButton;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC11MiraclePill14ViewController")
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
+@property (nonatomic, weak) IBOutlet UIPickerView * _Null_unspecified countryPicker;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified countryBtn;
+@property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull country;
 - (void)viewDidLoad;
+- (IBAction)countryBtnPressed:(id _Nonnull)sender;
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView * _Nonnull)pickerView;
+- (NSInteger)pickerView:(UIPickerView * _Nonnull)pickerView numberOfRowsInComponent:(NSInteger)component;
+- (NSString * _Nullable)pickerView:(UIPickerView * _Nonnull)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component;
+- (void)pickerView:(UIPickerView * _Nonnull)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
