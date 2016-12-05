@@ -6,22 +6,22 @@ provides-nominal:
 provides-member:
 - ["C11MiraclePill11AppDelegate", ""]
 provides-dynamic-lookup:
-- "application"
-- "applicationWillEnterForeground"
-- "applicationDidBecomeActive"
-- "window"
+- "applicationDidEnterBackground"
 - "applicationWillTerminate"
 - "applicationWillResignActive"
-- "applicationDidEnterBackground"
+- "applicationDidBecomeActive"
+- "window"
+- "application"
+- "applicationWillEnterForeground"
 depends-top-level:
-- "Bool"
-- "UIApplicationDelegate"
+- !private "BooleanLiteralType"
 - "UIResponder"
+- "UIApplication"
 - "UIApplicationLaunchOptionsKey"
 - "AppDelegate"
-- "UIApplication"
-- !private "BooleanLiteralType"
+- "UIApplicationDelegate"
 - "UIWindow"
+- "Bool"
 depends-member:
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]
