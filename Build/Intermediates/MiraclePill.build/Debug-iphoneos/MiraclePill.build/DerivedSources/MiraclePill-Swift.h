@@ -136,21 +136,44 @@ SWIFT_CLASS("_TtC11MiraclePill11AppDelegate")
 @end
 
 @class UIPickerView;
+@class UIImageView;
+@class UILabel;
+@class UIView;
+@class UITextField;
 @class UIButton;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC11MiraclePill14ViewController")
 @interface ViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
-@property (nonatomic, weak) IBOutlet UIPickerView * _Null_unspecified countryPicker;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified logoImg;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified titleLb;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified priceLb;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified seperatorView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified nameLb;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified nameTxt;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified addressLb;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified addressTxt;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified cityLb;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified cityTxt;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified countryLb;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified countryBtn;
+@property (nonatomic, weak) IBOutlet UIPickerView * _Null_unspecified countryPicker;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified pbLb;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified pbTxt;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified pcLb;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified pcTxt;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified buyBtn;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified successImg;
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull country;
 - (void)viewDidLoad;
+- (void)dismissKeyboard;
 - (IBAction)countryBtnPressed:(id _Nonnull)sender;
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView * _Nonnull)pickerView;
 - (NSInteger)pickerView:(UIPickerView * _Nonnull)pickerView numberOfRowsInComponent:(NSInteger)component;
 - (NSString * _Nullable)pickerView:(UIPickerView * _Nonnull)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component;
 - (void)pickerView:(UIPickerView * _Nonnull)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+- (IBAction)buyBtnPressed:(id _Nonnull)sender;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
